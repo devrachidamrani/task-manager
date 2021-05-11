@@ -1,0 +1,40 @@
+body {
+  margin: 4rem 0;
+  padding: 0;
+}
+
+.app {
+  width: 70%;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #f3f3f3;
+  padding: 1rem;
+  font-family: 'Quicksand', sans-serif;
+  border-radius: 5%;
+}
+
+h2 {
+  letter-spacing: 0.3rem;
+}
+
+input[type='text'] {
+  width: 70%;
+  padding: 0.3rem;
+  font-size: 1rem;
+}
+
+button {
+  border: 0;
+  padding: 0.5rem;
+  width: 4rem;
+  font-weight: 700;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  border-radius: 10%;
+  background-color: darkorange;
+}
+
+button:active {
+  background-color: rgb(255, 154, 31);
+}
