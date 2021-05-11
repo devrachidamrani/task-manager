@@ -23,7 +23,7 @@ input[type='text'] {
   font-size: 1rem;
 }
 
-button {
+.save {
   border: 0;
   padding: 0.5rem;
   width: 4rem;
@@ -35,6 +35,30 @@ button {
   background-color: darkorange;
 }
 
-button:active {
+.save:active {
   background-color: rgb(255, 154, 31);
+}
+
+.delete {
+  background-color: red;
+  color: white;
+  border: 0;
+  font-size: 1rem;
+  padding: 0.4rem;
+  cursor: pointer;
+}
+
+.delete:hover {
+  background: rgb(218, 13, 13);
+}
+
+.task {
+  width: 70%;
+  padding: 0.5rem 1rem;
+  border-radius: 5%;
+  margin: 0.7rem auto;
+  background: lightgray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

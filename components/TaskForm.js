@@ -9,7 +9,7 @@ const TaskForm = ({ onChange, onAdd }) => {
         name="task"
         onChange={onChange}
       />{' '}
-      <button variant="text" color="default" onClick={onAdd}>
+      <button className="save" onClick={onAdd}>
         Save
       </button>
     </>

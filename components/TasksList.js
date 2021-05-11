@@ -5,7 +5,12 @@ const TasksList = ({ allTasks }) => {
     <div>
       <h2>Tasks List</h2>
       {allTasks.length > 0 &&
-        allTasks.map((task, index) => <li key={index}>{task.task}</li>)}
+        allTasks.map((task, index) => (
+          <div key={index} className="task">
+            {task.task}
+            <button className="delete">Delete</button>
+          </div>
+        ))}
     </div>
   )
 }
