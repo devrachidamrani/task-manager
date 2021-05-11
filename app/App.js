@@ -7,7 +7,13 @@ const App = () => {
   const [allTasks, setAllTasks] = useState([])
 
   const addNewTask = () => {
-    if (!newTask.task) alert('Please fill in the input')
+    const task = newTask.task
+
+    if (task.trim() === '') {
+      alert('Please fill in the input')
+      return
+    }
+
     setAllTasks((prevState) => {
       return [...prevState, newTask]
     })
