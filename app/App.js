@@ -8,10 +8,15 @@ const App = () => {
 
   const addNewTask = () => {
     const task = newTask.task
-
     if (task.trim() === '') {
       alert('Please fill in the input')
       return
+    }
+
+    const foundTask = allTasks.find((elt) => elt.task === task)
+
+    if (foundTask) {
+      return alert('This task is already saved!')
     }
 
     setAllTasks((prevState) => {
@@ -19,10 +24,13 @@ const App = () => {
     })
   }
 
-  const deleteTask = (id) => {}
+  const deleteTaskById = (id) => {
+    setAllTasks((prev) => prev.filter((task) => task.id !== id))
+  }
 
   const handleChange = ({ target }) => {
     const { name, value } = target
+
     setNewTask((prevState) => {
       return {
         ...prevState,
@@ -38,7 +46,7 @@ const App = () => {
 
       <hr />
       <TaskForm onChange={handleChange} onAdd={addNewTask} />
-      <TasksList onDelete={deleteTask} allTasks={allTasks} />
+      <TasksList deleteHandler={deleteTaskById} allTasks={allTasks} />
     </div>
   )
 }
